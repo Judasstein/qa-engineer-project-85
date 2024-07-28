@@ -178,6 +178,28 @@
     - Нажать "Try simple battle"
   expected-result: |
     Убедиться, что игра запускается без регистрации
+
+- summary: |
+    Успешное создание турнира
+  requirement: |
+    Пользователь должен иметь возможность создать турнир
+  prerequisites: |
+    Открыта главная страница
+  test-data: |
+     Name = My fancy tournament Type = individual Description = Test tournament
+     Starts at = 28.07.2024 14:00 Access type = public Task strategy = random_per_game
+     Score strategy = time_and_tests Task provider = level Level = easy Event = 1 
+     Player limit = 16 Default language = js Match timeout seconds = 200 Break duration seconds = 60
+  steps:
+    - Нажать на аватар
+    - Нажать "Tournaments"
+    - Проскроллить страницу вниз
+    - Ввести название в поле "Name"
+    - Выбрать "Type"
+    - Ввести "Description"
+    - 
+  expected-result: |
+    Убедиться, что игра запускается без регистрации
     
 - summary: |
     Успешный просмотр текущей игры между другими пользователями
