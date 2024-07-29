@@ -17,15 +17,15 @@
 
 - summary: |
     Неуспешная регистрация через сайт
-  status: fail
+  status: pass
 
 - summary: |
     Неуспешный вход с помощью несуществующего эмейла
-  status: fail
+  status: pass
 
 - summary: |
     Неуспешный вход с помощью несуществующего пароля
-  status: fail
+  status: pass
 
 - summary: |
     Успешное восстановление пароля
