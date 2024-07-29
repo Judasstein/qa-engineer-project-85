@@ -197,9 +197,19 @@
     - Ввести название в поле "Name"
     - Выбрать "Type"
     - Ввести "Description"
-    - 
+    - Установить "Starts at"
+    - Установить "Access type"
+    - Установить "Task strategy"
+    - Установить "Score strategy"
+    - Установить "Task provider"
+    - Установить "Level"
+    - Установить "Players limit"
+    - Установить "Default language"
+    - Установить "Match timeout seconds"
+    - Установить "Break duration seconds"
+    - Нажать "Create"
   expected-result: |
-    Убедиться, что игра запускается без регистрации
+    Убедиться, что турнир создан
     
 - summary: |
     Успешный просмотр текущей игры между другими пользователями
