@@ -122,3 +122,20 @@
 - summary: |
      Успешная защита от вставки кода в поле соперника
   status: pass
+
+- summary: |
+      Успешный редирект на страницу проекта в Github
+  status: pass
+
+- summary: |
+     Успешный редирект на сайт Hexlet.io
+  status: pass
+
+- summary: |
+      Успешный редирект на сервер Codebattle в дискорде
+  status: pass
+
+- summary: |
+    Успешный редирект на телеграм канал Codebattle
+  status: pass
+
