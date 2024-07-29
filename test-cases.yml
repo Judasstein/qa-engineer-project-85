@@ -494,3 +494,60 @@
     - Вставить код
   expected-result: |
     Убедиться, что поле соперника защищено от вставки
+
+- summary: |
+    Успешный редирект на страницу проекта в Github
+  requirement: |
+    При нажатии на "Source Code" должен происходить переход на Github
+  prerequisites:
+    Открыта главная страница
+  test-data: |
+    empty
+  steps:
+    - Нажать на аватар
+    - Нажать "Source Code"
+  expected-result: |
+    Убедиться, что происходит редирект на страницу проекта на Github
+
+- summary: |
+    Успешный редирект на сайт Hexlet.io
+  requirement: |
+    При нажатии на "Hexlet" должен происходить переход на сайт Hexlet.io
+  prerequisites:
+    Открыта главная страница
+  test-data: |
+    empty
+  steps:
+    - Нажать на аватар
+    - Нажать "Hexlet"
+  expected-result: |
+    Убедиться, что происходит редирект на сайт Hexlet
+
+- summary: |
+    Успешный редирект на сервер Codebattle в дискорде
+  requirement: |
+    При нажатии на "Join Discord" должно появиться окно с приглашением в дискорд
+  prerequisites:
+    Открыта главная страница, пользователь авторизован в дискорде
+  test-data: |
+    empty
+  steps:
+    - Нажать на аватар
+    - Нажать "Join Discord"
+    - Нажать "Перейти в Discord"
+  expected-result: |
+    Убедиться, что ссылка на приглашение работает
+
+- summary: |
+    Успешный редирект на телеграм канал Codebattle
+  requirement: |
+    При нажатии на "Tg#codebattle" должно появиться окно с приглашением в телеграм
+  prerequisites:
+    Открыта главная страница, пользователь авторизован в телеграм
+  test-data: |
+    empty
+  steps:
+    - Нажать на аватар
+    - Нажать "Tg#codebattle"
+  expected-result: |
+    Убедиться, что ссылка на приглашение в канал работает
