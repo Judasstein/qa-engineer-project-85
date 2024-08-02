@@ -405,18 +405,42 @@
     Убедиться, что отображается два экрана, свой и соперника
 
 - summary: |
-    Успешая проверка решения в игре
+    Успешая проверка верного решения в игре
   requirement: |
-    Пользователь должен иметь возможность проверить правильность решения
+    При правильном решении пользователь должен получить сообщение "Woohoo, you're Champion!!!!!"
   prerequisites:
     Пользователь участвует в игре
   test-data: |
-    Empty
+    const _ = require("lodash");
+    const R = require("rambda");
+    const solution = (width, length) => {
+    return width * length;
+    };
+    module.exports = solution;
   steps:
     - Ввести решение
     - Нажать "Run"
   expected-result: |
-    Убедиться, что проверка решения выполняется
+    Убедиться, что при верном решении пользователь получил сообщение "Woohoo, you're Champion!!!!!"
+
+- summary: |
+    Успешая проверка неверного решения в игре
+  requirement: |
+    Если решение неверное, пользователь должен получить сообщение "Tests failed"
+  prerequisites:
+    Пользователь участвует в игре
+  test-data: |
+    const _ = require("lodash");
+    const R = require("rambda");
+    const solution = (width, length) => {
+    return 0;
+    };
+    module.exports = solution;
+  steps:
+    - Ввести решение
+    - Нажать "Run"
+  expected-result: |
+    Убедиться, что пользователь получил сообщение "Tests failed"
 
 - summary: |
     Успешное переподключение к игре
