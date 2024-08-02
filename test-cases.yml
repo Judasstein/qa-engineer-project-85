@@ -477,6 +477,33 @@
     Убедиться, что другой пользователь видит сообщение о победителе
 
 - summary: |
+    Успешный вывод сообщения о проигрыше
+  requirement: |
+    Когда один из игроков находит верное решение, проигравший должен получить сообщение "If you read this you've lost the game"
+  prerequisites:
+    Пользователь участвует в игре с ботом
+  test-data: |
+    empty
+  steps:
+    - Дождаться окончания раунда
+  expected-result: |
+    Убедиться, что проигравший получил сообщение "If you read this you've lost the game"
+
+- summary: |
+    Успешное предложение сдаться
+  requirement: |
+    У пользователя должна быть возможность сдаться (появится сообщение "If you read this you've lost the game")
+  prerequisites:
+    Пользователь участвует в игре с ботом
+  test-data: |
+    empty
+  steps:
+    - Нажать на красный флаг
+    - Нажать "Give up"
+  expected-result: |
+    Убедиться, что пользователь получил сообщение "If you read this you've lost the game"
+
+- summary: |
     Успешная защита от XSS 
   requirement: |
     Сайт должен быть защищен от XSS уязвимостей
